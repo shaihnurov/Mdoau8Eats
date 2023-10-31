@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mdoau8Eats.EatPage"  NavigationPage.HasNavigationBar="false">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Продукт ⇒ " FontSize="Title"/>
+            <Label Text="{Binding Name}" FontSize="Title"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Белки ⇒ " FontSize="Subtitle"/>
+            <Label Text="{Binding Proteins}" FontSize="Subtitle" x:Name="proteins"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Жиры ⇒ " FontSize="Subtitle"/>
+            <Label Text="{Binding Fats}" x:Name="fats" FontSize="Subtitle"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Углеводы ⇒ " FontSize="Subtitle"/>
+            <Label Text="{Binding Carbohy}" x:Name="carbohy" FontSize="Subtitle"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal">
+            <Label Text="Килокалорий ⇒ " FontSize="Subtitle"/>
+            <Label Text="{Binding Kilocalories}" x:Name="kilocalories" FontSize="Subtitle"/>
+        </StackLayout>
+
+
+        <Entry Placeholder="Укажите грамовки/мл" x:Name="gramm" FontSize="Subtitle"/>
+        <Button Text="Рассчитать" Clicked="Button_Clicked" FontSize="Subtitle"/>
+
+        <StackLayout x:Name="StackResultAll" Orientation="Vertical">
+            <Label x:Name="ProteinsResult" FontSize="Subtitle"/>
+            <Label x:Name="FatsResult" FontSize="Subtitle"/>
+            <Label x:Name="CarbohyResult" FontSize="Subtitle"/>
+            <Label x:Name="KilocaloriesResult" FontSize="Subtitle"/>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>
